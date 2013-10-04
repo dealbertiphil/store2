@@ -1,8 +1,10 @@
 Store2::Application.routes.draw do
   root 'static_pages#home'
-
+  match '/help',    to: 'static_pages#help',    via: 'get'
+  match 'home2', to: 'static_pages#home2', via: 'get'
   get "static_pages/home"
   get "static_pages/help"
+  get "static_pages/home2"
   resources :microposts
 
   resources :users
